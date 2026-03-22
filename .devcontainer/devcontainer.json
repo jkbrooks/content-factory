@@ -1,0 +1,26 @@
+{
+  "name": "Content Factory",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "20" },
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.11" }
+  },
+  "onCreateCommand": "npm install -g pnpm@9",
+  "postCreateCommand": "bash setup.sh",
+  "forwardPorts": [3100],
+  "portsAttributes": {
+    "3100": { "label": "Paperclip UI", "onAutoForward": "openBrowser" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}

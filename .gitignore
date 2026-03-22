@@ -1,0 +1,21 @@
+.env
+*.pyc
+__pycache__/
+.venv/
+venv/
+node_modules/
+corpus/source       # local symlink — never commit
+corpus/private/     # anything you explicitly mark private
+*.sqlite
+*.db
+dist/
+.DS_Store
+
+# Queue content is ephemeral
+agents/queue/outlines/**/*.json
+agents/queue/drafts/**/*.md
+agents/queue/approved/**/*.md
+agents/queue/rejected/**/*.md
+agents/queue/published/**/*.md
+agents/queue/processed/**/*.json
+!agents/queue/**/.gitkeep
